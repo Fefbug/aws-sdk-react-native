@@ -23,6 +23,7 @@ import com.amazonaws.auth.AWSSessionCredentials;
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
 import com.amazonaws.auth.IdentityChangedListener;
 import com.amazonaws.regions.Regions;
+import com.amazonaws.util.DateUtils;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.Promise;
@@ -35,6 +36,8 @@ import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -145,7 +148,8 @@ public class AWSRNCognitoCredentials extends ReactContextBaseJavaModule {
                         credentials.putString(ACCESS_KEY, cred.getAWSAccessKeyId());
                         credentials.putString(SESSION_KEY, cred.getSessionToken());
                         credentials.putString(SECRET_KEY, cred.getAWSSecretKey());
-                        credentials.putString(EXPIRATION, credentialsProvider.getSessionCredentitalsExpiration().toString());
+                        Date sessionCredentitalsExpiration = credentialsProvider.getSessionCredentitalsExpiration();
+                        credentials.putString(EXPIRATION, DateUtils.formatISO8601Date(sessionCredentitalsExpiration));
                         return credentials;
                     }
                     else {

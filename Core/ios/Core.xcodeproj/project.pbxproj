@@ -91,7 +91,7 @@
 				EBFDBAAB1CF536B60008F9A8 /* Sources */,
 				EBFDBAAC1CF536B60008F9A8 /* Frameworks */,
 				EBFDBAAD1CF536B60008F9A8 /* CopyFiles */,
-				EBFDBAC11CF537DC0008F9A8 /* ShellScript */,
+				EBFDBAC11CF537DC0008F9A8 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -134,18 +134,19 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		EBFDBAC11CF537DC0008F9A8 /* ShellScript */ = {
+		EBFDBAC11CF537DC0008F9A8 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"Frameworks/AWSCore.framework/strip-frameworks.sh\"";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -203,6 +204,7 @@
 					"$(SRCROOT)/../../react-native/React/**",
 					"../../../../../../react-native/React/**",
 					"../../../../../../react-native/React/Base/**",
+					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -246,6 +248,7 @@
 					"$(SRCROOT)/../../react-native/React/**",
 					"../../../../../../react-native/React/**",
 					"../../../../../../react-native/React/Base/**",
+					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -266,6 +269,7 @@
 					"../../react-native/React/**",
 					"../../../../../react-native/React/**",
 					"../../../../../../react-native/React/Base/**",
+					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
@@ -286,6 +290,7 @@
 					"../../react-native/React/**",
 					"../../../../../react-native/React/**",
 					"../../../../../../react-native/React/Base/**",
+					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
