@@ -149,7 +149,9 @@ public class AWSRNCognitoCredentials extends ReactContextBaseJavaModule {
                         credentials.putString(SESSION_KEY, cred.getSessionToken());
                         credentials.putString(SECRET_KEY, cred.getAWSSecretKey());
                         Date sessionCredentitalsExpiration = credentialsProvider.getSessionCredentitalsExpiration();
-                        credentials.putString(EXPIRATION, DateUtils.formatISO8601Date(sessionCredentitalsExpiration));
+                        if (sessionCredentitalsExpiration != null) {
+                          credentials.putString(EXPIRATION, DateUtils.formatISO8601Date(sessionCredentitalsExpiration));  
+                        }
                         return credentials;
                     }
                     else {
