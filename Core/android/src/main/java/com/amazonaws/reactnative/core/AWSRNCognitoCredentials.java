@@ -49,7 +49,7 @@ public class AWSRNCognitoCredentials extends ReactContextBaseJavaModule {
     private static final String CURRENT = "current";
     private static final String PREVIOUS = "previous";
     private static final String IDENTITYCHANGE = "IdentityChange";
-    private static final String IDENTITYID = "identityid";
+    private static final String IDENTITYID = "identityId";
     private static final String ACCESS_KEY = "AccessKey";
     private static final String SESSION_KEY = "SessionKey";
     private static final String SECRET_KEY = "SecretKey";
