@@ -458,7 +458,7 @@ public class AWSRNS3TransferUtility extends ReactContextBaseJavaModule {
                 errorMap.putString(DESCRIPTION, ex.getLocalizedMessage());
                 errorMap.putInt(CODE, ex.hashCode());
                 map.putMap(ERROR, errorMap);
-                sendEvent(getReactApplicationContext(), "ProgressEventUtility", map);
+                sendEvent(getReactApplicationContext(), "CompletionHandlerEvent", map);
             }
         });
     }
