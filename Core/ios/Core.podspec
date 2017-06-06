@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.frameworks   = 'UIKit', 'Foundation', 'SystemConfiguration'
   s.libraries    = 'z', 'sqlite3'
   s.requires_arc = true
-  s.dependency 'AWSCore', '2.5.3'
+  s.dependency 'AWSCore', '2.5.7'
   s.source_files = 'AWSSRNC/*.{h,m}', 'AWSR/**/*.{h,m}'
   s.private_header_files = 'AWSCore/XMLDictionary/**/*.h'
 end
