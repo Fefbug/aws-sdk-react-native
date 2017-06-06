@@ -34,6 +34,11 @@ RCT_EXPORT_METHOD(initWithOptions:(NSDictionary* )options){
         helper = [[AWSRNHelper alloc]init];
         requestMap = [[NSMutableDictionary alloc]init];
         AWSRNCognitoCredentials* CognitoCredentials = (AWSRNCognitoCredentials*)[_bridge moduleForName:@"AWSRNCognitoCredentials"];
+        int count = 0;
+        while(![CognitoCredentials getCredentialsProvider] && count != 5){
+            [NSThread sleepForTimeInterval:0.25];
+            count++;
+        }
         if(![CognitoCredentials getCredentialsProvider]){
             @throw [NSException exceptionWithName:@"InvalidArgument" reason:@"AWSCognitoCredentials is not initialized" userInfo:options];
         }
@@ -128,14 +133,9 @@ RCT_EXPORT_METHOD(download:(NSDictionary*)options resolver:(RCTPromiseResolveBlo
                              bucket:[request objectForKey:@"bucket"]
                                 key:[request objectForKey:@"key"]
                          expression:[request objectForKey:@"expression"]
-                   completionHander:[request objectForKey:@"completionhandler"]] continueWithBlock:^id(AWSTask *task) {
+                   completionHandler:[request objectForKey:@"completionhandler"]] continueWithBlock:^id(AWSTask *task) {
         if (task.error) {
             reject([NSString stringWithFormat: @"%ld", (long)task.error.code],task.error.description,task.error);
-        }
-        if (task.exception) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                @throw [NSException exceptionWithName:task.exception.name reason:task.exception.reason userInfo:task.exception.userInfo];
-            });
         }
         if (task.result) {
             AWSS3TransferUtilityDownloadTask *downloadTask = (AWSS3TransferUtilityDownloadTask*)task.result;
@@ -225,14 +225,9 @@ RCT_EXPORT_METHOD(upload:(NSDictionary*)options resolver:(RCTPromiseResolveBlock
                              key:[request objectForKey:@"key"]
                      contentType:[request objectForKey:@"contenttype"]
                       expression:[request objectForKey:@"expression"]
-                completionHander:[request objectForKey:@"completionhandler"]] continueWithBlock:^id(AWSTask *task) {
+                completionHandler:[request objectForKey:@"completionhandler"]] continueWithBlock:^id(AWSTask *task) {
         if (task.error) {
             reject([NSString stringWithFormat: @"%ld", (long)task.error.code],task.error.description,task.error);
-        }
-        if (task.exception) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                @throw [NSException exceptionWithName:task.exception.name reason:task.exception.reason userInfo:task.exception.userInfo];
-            });
         }
         if (task.result) {
             AWSS3TransferUtilityUploadTask *uploadTask = (AWSS3TransferUtilityUploadTask*)task.result;

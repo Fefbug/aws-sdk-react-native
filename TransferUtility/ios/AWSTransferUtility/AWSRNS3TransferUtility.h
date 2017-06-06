@@ -16,8 +16,8 @@
 #import <Foundation/Foundation.h>
 #import <AWSS3/AWSS3.h>
 
-#import "RCTEventDispatcher.h"
-#import "RCTBridgeModule.h"
+#import "React/RCTEventDispatcher.h"
+#import "React/RCTBridgeModule.h"
 #import "AWSRNHelper.h"
 
 @interface AWSRNS3TransferUtility : NSObject <RCTBridgeModule>
