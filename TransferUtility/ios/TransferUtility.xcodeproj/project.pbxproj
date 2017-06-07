@@ -248,7 +248,7 @@
 					"../node_modules/**",
 					"../../../../../../react-native/React/Base/**",
 					"../../../../../../react-native/React/**",
-					"${SRCROOT}/../../../../ios/Pods/Headers/Public/**",
+					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 					"${SRCROOT}/../../../../node_modules/aws-sdk-react-native-core/ios/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
@@ -270,7 +270,7 @@
 					"../node_modules/**",
 					"../../../../../../react-native/React/Base/**",
 					"../../../../../../react-native/React/**",
-					"${SRCROOT}/../../../../ios/Pods/Headers/Public/**",
+					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 					"${SRCROOT}/../../../../node_modules/aws-sdk-react-native-core/ios/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
