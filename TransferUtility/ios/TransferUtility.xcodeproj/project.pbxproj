@@ -249,7 +249,7 @@
 					"../../../../../../react-native/React/Base/**",
 					"../../../../../../react-native/React/**",
 					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
-					"${SRCROOT}/../../../../node_modules/aws-sdk-react-native-core/ios/**",
+					"${SRCROOT}/../../../node_modules/aws-sdk-react-native-core/ios/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TransferUtility;
@@ -271,7 +271,7 @@
 					"../../../../../../react-native/React/Base/**",
 					"../../../../../../react-native/React/**",
 					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
-					"${SRCROOT}/../../../../node_modules/aws-sdk-react-native-core/ios/**",
+					"${SRCROOT}/../../../node_modules/aws-sdk-react-native-core/ios/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TransferUtility;
