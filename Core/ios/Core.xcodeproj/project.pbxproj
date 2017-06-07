@@ -204,7 +204,7 @@
 					"$(SRCROOT)/../../react-native/React/**",
 					"../../../../../../react-native/React/**",
 					"../../../../../../react-native/React/Base/**",
-					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
+					"${SRCROOT}/../../../../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -248,7 +248,7 @@
 					"$(SRCROOT)/../../react-native/React/**",
 					"../../../../../../react-native/React/**",
 					"../../../../../../react-native/React/Base/**",
-					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
+					"${SRCROOT}/../../../../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -269,7 +269,8 @@
 					"../../react-native/React/**",
 					"../../../../../react-native/React/**",
 					"../../../../../../react-native/React/Base/**",
-					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
+					"${SRCROOT}/../../../../ios/Pods/Headers/Public/**",
+					"${SRCROOT}/../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
@@ -290,7 +291,8 @@
 					"../../react-native/React/**",
 					"../../../../../react-native/React/**",
 					"../../../../../../react-native/React/Base/**",
-					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
+					"${SRCROOT}/../../../../ios/Pods/Headers/Public/**",
+					"${SRCROOT}/../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";

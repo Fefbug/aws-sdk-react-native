@@ -183,6 +183,7 @@
 				HEADER_SEARCH_PATHS = (
 					"../../../../../../react-native/React/**",
 					"../node_modules/**",
+					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -225,6 +226,7 @@
 				HEADER_SEARCH_PATHS = (
 					"../../../../../../react-native/React/**",
 					"../node_modules/**",
+					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -246,6 +248,7 @@
 					"../node_modules/**",
 					"../../../../../../react-native/React/Base/**",
 					"../../../../../../react-native/React/**",
+					"${SRCROOT}/../../../../ios/Pods/Headers/Public/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TransferUtility;
@@ -266,6 +269,7 @@
 					"../node_modules/**",
 					"../../../../../../react-native/React/Base/**",
 					"../../../../../../react-native/React/**",
+					"${SRCROOT}/../../../../ios/Pods/Headers/Public/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TransferUtility;
