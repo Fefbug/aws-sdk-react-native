@@ -1,7 +1,7 @@
 {
   "name": "aws-sdk-react-native-transfer-utility",
   "description": "A React Native wrapper for the AWS SDK for the S3 Transfer Utility.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./src/index.js",
   "files": [
     "android/",
